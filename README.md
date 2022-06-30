@@ -19,8 +19,8 @@ Please cite our paper if you want to use `ZoMBI`:
 - [Installation](#installation)
 - [Usage](#usage)
 - [Datasets](#datasets)
-  *[5D Ackley Function](#5d-ackley-function)
-  *[5D Negative Poisson's Ratio](#5d-negative-poissons-ratio)
+  - [5D Ackley Function](#5d-ackley-function)
+  - [5D Negative Poisson's Ratio](#5d-negative-poissons-ratio)
 - [Authors](#authors)
 
 # File Summary

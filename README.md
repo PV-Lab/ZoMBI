@@ -2,7 +2,7 @@
 
 | Files | Description |
 | ------------- | ------------------------------ |
-| [examples.pynb](./examples.pynb)  | Run ZoMBI on the example datasets 5D Ackley function and 5D Negative Poisson's Ratio |
+| [examples.ipynb](./examples.ipynb)  | Run ZoMBI on the example datasets 5D Ackley function and 5D Negative Poisson's Ratio |
 | [zombi.py](./zombi.py)  | Code to run the ZoMBI optimization procedure |
 | [acquisitions.py](./acquisitions.py)  | Code for the acquisition functions LCB, LCB Adaptive, EI, and EI Abrupt |
 | [utils.py](./utils.py)  | Utility code for ZoMBI optimization and plotting |

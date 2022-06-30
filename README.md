@@ -57,7 +57,7 @@ Implementation of this code is demonstrated in [examples.ipynb](./examples.ipynb
 # Datasets
 We implement two datasets to illustrate the performance of the `ZoMBI` algorithm:
 ### 5D Ackley Function
-The Ackley function is a non-convex benchmarking function with several local minima and one sharp, "needle-like" global minimum. In [examples.ipynb](./examples.ipynb) we explore a 5D Ackley function with $b=0.5$ optimum narrowness, where $b\in[0,1]$ -- as $b \to 1$, the optimum becomes more narrow. In the paper, we explore 2D--10D Ackley functions with narrowness $b=0.05$ to $b=1.0$.
+The Ackley function is a non-convex benchmarking function with several local minima and one sharp, "needle-like" global minimum. In [examples.ipynb](./examples.ipynb) we explore a 5D Ackley function with $b=0.5$ optimum narrowness, where $b\in[0,1]$, as $b \to 1$, the optimum becomes more narrow. In the paper, we explore 2D-10D Ackley functions with narrowness $b=0.05$ to $b=1.0$.
 
 The analytical model for the Ackley function is:
 $f(X) = -a\textrm{exp}\left(-b \sqrt{\frac{1}{d}\sum X^2_i}\right) - \textrm{exp}\left(\frac{1}{d}\sum\textrm{cos}(c X_i)\right) + a + \textrm{exp}(1)$

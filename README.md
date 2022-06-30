@@ -6,7 +6,7 @@
 | [zombi.py](./zombi.py)  | Code to run the ZoMBI optimization procedure |
 | [acquisitions.py](./acquisitions.py)  | Code for the acquisition functions LCB, LCB Adaptive, EI, and EI Abrupt |
 | [utils.py](./utils.py)  | Utility code for ZoMBI optimization and plotting |
-| [data](./data)  | Folder containing the [code to train the RF Poisson's ratio model](./data) and the [pickled pre-trained RF Poisson's ratio model](./poisson_RF_trained.pkl) |
+| [data](./data)  | Folder containing the [code to train the RF Poisson's ratio model](./data) and the [pickled pre-trained RF Poisson's ratio model](./data/poisson_RF_trained.pkl) |
 
 
 # Authors

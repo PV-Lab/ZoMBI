@@ -1,8 +1,8 @@
 # Zooming Memory-Based Initialization (`ZoMBI`)
 
-This software package implements the Zooming Memory-Based Initialization (`ZoMBI`) algorithm as an augmentation to standard Bayesian optimization. The `ZoMBI` algorithm augments standard Bayesian optimization by 
-(1) zooming in the bounds of the search space for each dimension based on previously high-performing datapoints stored in memory to quickly find solutions to "needle-in-a-haystack" problems and 
-(2) purging the memory of all other historical data points to accelerate algorithm compute times from $O(n^3)$ to $O(1)$.
+This software package implements the Zooming Memory-Based Initialization (`ZoMBI`) algorithm as an augmentation to standard Bayesian optimization. The `ZoMBI` algorithm augments standard Bayesian optimization by:
+  1. Zooming in the bounds of the search space for each dimension based on previously high-performing datapoints stored in memory to quickly find solutions to "needle-in-a-haystack" problems
+  2. Purging the memory of all other historical data points to accelerate algorithm compute times from $O(n^3)$ to $O(1)$.
 
 The package has two primary components:
 

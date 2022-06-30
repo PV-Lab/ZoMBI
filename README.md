@@ -2,7 +2,7 @@
 
 This software package implements the Zooming Memory-Based Initialization (`ZoMBI`) algorithm as an augmentation to standard Bayesian optimization. The `ZoMBI` algorithm augments standard Bayesian optimization by:
   1. Zooming in the bounds of the search space for each dimension based on previously high-performing datapoints stored in memory to quickly find solutions to "needle-in-a-haystack" problems
-  2. Purging the memory of all other historical data points to accelerate algorithm compute times from $O(n^3)$ to $O(1)$.
+  2. Purging the memory of all other historical data points to accelerate algorithm compute times from $O(n^3)$ to $O(1)$
 
 The package has two primary components:
 
@@ -44,7 +44,21 @@ The optimization procedure begins by calling `ZoMBI(·).optimize(X_initial, fX_i
 Implementation of this code is demonstrated in [examples.ipynb](./examples.ipynb).
 
 # Datasets
-We implement two datasets
+We implement two datasets to illustrate the performance of the `ZoMBI` algorithm:
+### 1. 5D Ackley Function
+The Ackley function is a non-convex benchmarking function with several local minima and one sharp, "needle-like" global minimum. In [examples.ipynb](./examples.ipynb) we explore a 5D Ackley function with $b=0.5$ optimum narrowness, where $b\in[0,1]$ -- as $b \to 1$, the optimum becomes more narrow. In the paper, we explore 2D--10D Ackley functions with narrowness $b=0.05$ to $b=1.0$.
+
+The analytical model for the Ackley function is:
+$f(X) = -a\;\textrm{exp}\left(-b \sqrt{\frac{1}{d}\sum_{i=1}^d X^2_i}\right) - \textrm{exp}\left(\frac{1}{d}\sum_{i=1}^d\textrm{cos}(c X_i)\right) + a + \textrm{exp}(1)$
+
+### 2. 5D Negative Poisson's Ratio
+The Poisson's ratio dataset is a set of 146,323 materials (*as of 30 June 2022*) from the [Materials Project Database](https://materialsproject.org/). Only 0.81% of the materials in the dataset have a negative Poisson's ratio, the rest are positive. Poisson's ratio indicates whether a material's cross-section expands or contracts when under compressive or tensile applied loads. Very few materials exhibit negative Poisson's ratios, resulting in a "needle-in-a-haystack" challenge. We deploy `ZoMBI` to minimize the Poisson's ratio acros 5 material properties: 
+`X = [Molecular Density,
+Atmoic Energy,
+Fermi Energy,
+Energy Above Hull,
+Band Gap]`
+
 
 # Authors
 The code was written by Alexander E. Siemenn and Zekun Run, under the supervision of Tonio Buonassisi and Qianxiao Li.

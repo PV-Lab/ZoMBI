@@ -19,8 +19,8 @@ Please cite our paper if you want to use `ZoMBI`:
 - [Installation](#installation)
 - [Usage](#usage)
 - [Datasets](#datasets)
-  - [(1) 5D Ackley Function](#5d-ackley-function)
-  - [(2) 5D Negative Poisson's Ratio](#5d-negative-poissons-ratio)
+  - [5D Ackley Function](#5d-ackley-function)
+  - [5D Negative Poisson's Ratio](#5d-negative-poissons-ratio)
 - [Authors](#authors)
 
 # File Summary
@@ -56,13 +56,13 @@ Implementation of this code is demonstrated in [examples.ipynb](./examples.ipynb
 
 # Datasets
 We implement two datasets to illustrate the performance of the `ZoMBI` algorithm:
-### (1) 5D Ackley Function
+### 5D Ackley Function
 The Ackley function is a non-convex benchmarking function with several local minima and one sharp, "needle-like" global minimum. In [examples.ipynb](./examples.ipynb) we explore a 5D Ackley function with $b=0.5$ optimum narrowness, where $b\in[0,1]$ -- as $b \to 1$, the optimum becomes more narrow. In the paper, we explore 2D--10D Ackley functions with narrowness $b=0.05$ to $b=1.0$.
 
 The analytical model for the Ackley function is:
 $f(X) = -a\textrm{exp}\left(-b \sqrt{\frac{1}{d}\sum X^2_i}\right) - \textrm{exp}\left(\frac{1}{d}\sum\textrm{cos}(c X_i)\right) + a + \textrm{exp}(1)$
 
-### (2) 5D Negative Poisson's Ratio
+### 5D Negative Poisson's Ratio
 The Poisson's ratio dataset is a set of 146,323 materials (*as of 30 June 2022*) from the [Materials Project Database](https://materialsproject.org/). Only 0.81% of the materials in the dataset have a negative Poisson's ratio, the rest are positive. Poisson's ratio indicates whether a material's cross-section expands or contracts when under compressive or tensile applied loads. We deploy `ZoMBI` to minimize the Poisson's ratio acros 5 material properties: 
 `X = [Molecular Density,
 Atmoic Energy,

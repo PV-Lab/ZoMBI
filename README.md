@@ -1,4 +1,4 @@
-# Zooming Memory-Based Initialization (ZoMBI)
+# Zooming Memory-Based Initialization (\texttt{ZoMBI})
 
 | Files | Description |
 | ------------- | ------------------------------ |

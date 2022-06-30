@@ -23,7 +23,7 @@ Please cite our paper if you want to use `ZoMBI`:
 Install the `diversipy` package: `python -m pip install git+https://github.com/DavidWalz/diversipy`. 
 
 # Usage
-To use the `ZoMBI` algorithm, call `from zombi import *` and instantiate the `ZoMBI($\cdot$)` class variables:
+To use the `ZoMBI` algorithm, call `from zombi import *` and instantiate the `ZoMBI(·)` class variables:
 
 | Class Variable | Input |
 | ------------- | ------------------------------ |

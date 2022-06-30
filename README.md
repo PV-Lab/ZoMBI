@@ -1,6 +1,8 @@
 # Zooming Memory-Based Initialization (`ZoMBI`)
 
-This software package implements the Zooming Memory-Based Initialization (`ZoMBI`) algorithm as an augmentation to standard Bayesian optimization. The `ZoMBI` algorithm augments standard Bayesian optimization by (1) zooming in the bounds of the search space for each dimension based on previously high-performing datapoints stored in memory to quickly find solutions to "needle-in-a-haystack" problems and (2) purging the memory of all other historical data points to accelerate algorithm compute times from $O(n^3)$ to $O(1)$.
+This software package implements the Zooming Memory-Based Initialization (`ZoMBI`) algorithm as an augmentation to standard Bayesian optimization. The `ZoMBI` algorithm augments standard Bayesian optimization by 
+(1) zooming in the bounds of the search space for each dimension based on previously high-performing datapoints stored in memory to quickly find solutions to "needle-in-a-haystack" problems and 
+(2) purging the memory of all other historical data points to accelerate algorithm compute times from $O(n^3)$ to $O(1)$.
 
 The package has two primary components:
 
@@ -37,11 +39,12 @@ To use the `ZoMBI` algorithm, call `from zombi import *` and instantiate the `Zo
 | `forward` | The number of forwar experiments to run per `ZoMBI` activation. |
 | `ensemble` | The number of independent ensemble runs. |
 
-The optimization procedure begins by calling 
+The optimization procedure begins by calling `ZoMBI(·).optimize(X_initial, fX_initial)` with an initialization dataset and corresponding labels. For multi-dimensional datasets, using Latin Hypercube Sampling across d-dimensions is suggested: `X_initial = diversipy.polytope.sample(n_points=5, lower=np.zeros((1, d))[0], upper=np.ones((1, dimensions))[0], thin=0)`. After running the optimization procedure, the X and fX values predicted by `ZoMBI` are obtained using `ZoMBI(·).X` and `ZoMBI(·).fX`.
 
-
+Implementation of this code is demonstrated in [examples.ipynb](./examples.ipynb).
 
 # Datasets
+We implement two datasets
 
 # Authors
 The code was written by Alexander E. Siemenn and Zekun Run, under the supervision of Tonio Buonassisi and Qianxiao Li.

@@ -30,7 +30,8 @@ Please cite our paper if you want to use `ZoMBI`:
 | [zombi.py](./zombi.py)  | Code to run the ZoMBI optimization procedure. |
 | [acquisitions.py](./acquisitions.py)  | Code for the acquisition functions LCB, LCB Adaptive, EI, and EI Abrupt. |
 | [utils.py](./utils.py)  | Utility code for ZoMBI optimization and plotting. |
-| [data](./data)  | Folder containing the [code to train the RF Poisson's ratio model](./data) and the [pickled pre-trained RF Poisson's ratio model](./data/poisson_RF_trained.pkl). |
+| [data/ackley](./data/ackley)  | Folder containing the pickled ensemble data for each acquisition function in the paper over 1,000 experiments on the 5D Ackley dataset. |
+| [data/poisson](./data/poisson)  | Folder containing the pickled ensembel data for each acquisition function in the paper over 200 experiments on the 5D Poisson's ratio dataset, the [code to train the RF Poisson's ratio model](./data/poisson/train_RF.py) and the [pickled pre-trained RF Poisson's ratio model](./data/poisson/poisson_RF_trained.pkl). |
 
 # Installation
 Install the `diversipy` package: `python -m pip install git+https://github.com/DavidWalz/diversipy`. 

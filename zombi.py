@@ -96,7 +96,7 @@ class ZoMBI:
             fX_new = fX_bounded
             start = time.time()
             self.GP.fit(X_new, fX_new) # fit a zoomed-in, GP resolved near optimum
-            ac_value = self.BO(X=X_new, GP_model=self.GP, n=n, fX_best=self.fX_min_i[-1], fX_best_min=self.fX_min_i,
+            ac_value = self.BO(X=bounded_norm, GP_model=self.GP, n=n, fX_best=self.fX_min_i[-1], fX_best_min=self.fX_min_i,
                                xi=self.xi, beta=self.beta, beta_ab=self.beta_ab, eta=self.eta,
                                ratio=self.ratio, decay=self.decay)  # apply zooming constraints to search space
             self.compute_i.append(time.time()-start)

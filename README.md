@@ -1,13 +1,19 @@
 # Zooming Memory-Based Initialization (`ZoMBI`)
 
+![zombi](./figs/ZoMBI.png)
+
 This software package implements the Zooming Memory-Based Initialization (`ZoMBI`) algorithm as an augmentation to standard Bayesian optimization. The `ZoMBI` algorithm augments standard Bayesian optimization by:
   1. Zooming in the bounds of the search space for each dimension based on previously high-performing datapoints stored in memory to quickly find solutions to "needle-in-a-haystack" problems
   2. Purging the memory of all other historical data points to accelerate algorithm compute times from $O(n^3)$ to $O(1)$
 
 The package has two primary components:
 
-- **Active learning acquisition functions**: Implementation of the LCB Adaptive and EI Abrupt custom acquisition functions that use active learning to tune the sampling of new data points within the search space (in `acquisitions.py`).
+- **Adaptive learning acquisition functions**: Implementation of the LCB Adaptive and EI Abrupt custom acquisition functions that use adaptive learning to tune the sampling of new data points within the search space (in `acquisitions.py`).
 - **The `ZoMBI` optimization algorithm**: Takes in a multi-dimensional, complex "needle-in-a-haystack" dataset and optimizes it using one of the selected acquisition functions (in `zombi.py`).
+
+ZoMBI is designed specifically to optimize problems that exhibit a "needle-in-a-haystack" problem. The figure below illustrates how process optimzation manifolds are often smooth as each process is often a continuous variable. However, for materials optimization, the manifolds are often sharp with few narrow global optima since only discrete combinations of properties produce valid materials, unlike the continuous case for process optimization.
+
+![manifolds](./figs/manifold_types.png)
 
 # How to Cite
 Please cite our paper if you want to use `ZoMBI`:

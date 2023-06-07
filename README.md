@@ -23,7 +23,7 @@ Please cite our paper if you want to use `ZoMBI`:
        doi = {10.1038/s41524-023-01048-x},
        issn = {2057-3960},
        issue = {1},
-       journal = {npj Computational Materials 2023 9:1},
+       journal = {npj Computational Materials},
        keywords = {Electrical and electronic engineering,Mechanical properties,Thermoelectrics},
        month = {5},
        pages = {1-13},

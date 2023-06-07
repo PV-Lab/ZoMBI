@@ -18,15 +18,22 @@ ZoMBI is designed specifically to optimize problems that exhibit a "needle-in-a-
 # How to Cite
 Please cite our paper if you want to use `ZoMBI`:
 
-    @misc{https://doi.org/10.48550/arxiv.2208.13771,
-    doi = {10.48550/ARXIV.2208.13771},
-    url = {https://arxiv.org/abs/2208.13771},
-    author = {Siemenn, Alexander E. and Ren, Zekun and Li, Qianxiao and Buonassisi, Tonio},
-    title = {Fast Bayesian Optimization of Needle-in-a-Haystack Problems using Zooming Memory-Based Initialization},
-    publisher = {arXiv},
-    year = {2022},
-    copyright = {Creative Commons Attribution 4.0 International}
+    @article{Siemenn2023,
+       author = {Alexander E. Siemenn and Zekun Ren and Qianxiao Li and Tonio Buonassisi},
+       doi = {10.1038/s41524-023-01048-x},
+       issn = {2057-3960},
+       issue = {1},
+       journal = {npj Computational Materials 2023 9:1},
+       keywords = {Electrical and electronic engineering,Mechanical properties,Thermoelectrics},
+       month = {5},
+       pages = {1-13},
+       publisher = {Nature Publishing Group},
+       title = {Fast Bayesian optimization of Needle-in-a-Haystack problems using zooming memory-based initialization (ZoMBI)},
+       volume = {9},
+       url = {https://www.nature.com/articles/s41524-023-01048-x},
+       year = {2023},
     }
+
 
 
 # Table of Contents

@@ -77,7 +77,7 @@ def plot(fX_min, compute, nregular, bound_l, bound_u, dim, ensemble, activations
     if len(fX_min.shape) == 1:
         fX_min = fX_min.reshape(fX_min.shape[0], 1).T
         compute = compute.reshape(compute.shape[0], 1).T
-    fX_min50 = np.percentile(fX_min, q = 50, axis = 0)
+    fX_min50 = np.mean(fX_min, axis = 0)
     fX_min10 = np.percentile(fX_min, q = 10, axis = 0)
     fX_min90 = np.percentile(fX_min, q = 90, axis = 0)
     xs = np.linspace(1, len(fX_min50) + 1, len(fX_min50))
@@ -92,11 +92,8 @@ def plot(fX_min, compute, nregular, bound_l, bound_u, dim, ensemble, activations
     ax1.text(xpos, 1.05, 'Standard \u2190 ', fontsize=20, ha='right', color='orange', transform=ax1.transAxes)
     ax1.text(xpos, 1.05, ' \u2192 ZoMBI', fontsize=20, ha='left', color='b', transform=ax1.transAxes)
     xtics = [0, nregular, len(fX_min50) + 1]
-    ytics = [lmin, 0., lmax]
     ax1.set_xticks(xtics)
     ax1.set_xticklabels(xtics)
-    ax1.set_yticks(ytics)
-    ax1.set_yticklabels(np.round(ytics, 2))
     ax1.set_xlabel('Experiments')
     ax1.set_ylabel('Value, $f(X)$')
     ax1.minorticks_on()
@@ -104,7 +101,7 @@ def plot(fX_min, compute, nregular, bound_l, bound_u, dim, ensemble, activations
     ax1.grid(which='minor', linestyle='-', linewidth='0.5', color='grey', alpha=0.8)
     ax1.axhline(0, lw=1, c='k')
 
-    compute50 = np.percentile(compute, q=50, axis=0)
+    compute50 = np.mean(compute, axis=0)
     compute10 = np.percentile(compute, q=10, axis=0)
     compute90 = np.percentile(compute, q=90, axis=0)
     xs = np.linspace(1, len(compute50) + 1, len(compute50))

@@ -106,7 +106,10 @@ class ZoMBI:
                 j = j + 1
                 idx = np.argsort(ac_value)[j + 1:self.batch + j + 1]
             X_bounded = np.vstack([X_new, bounded_norm[idx]])
-            fX_bounded = np.append(fX_new, self.dataset_fX[idx])
+            fX_bounded_new = -1 * self.fX_model(bounded_norm[idx]) # evaluate target function at the optimum X
+            fX_bounded = np.append(fX_new, fX_bounded_new)
+            # fX_bounded = np.append(fX_new, self.dataset_fX[idx]) # original implementation
+            
             idx_old = idx
 
         X_bounded_full = np.array(X_bounded)
@@ -184,4 +187,3 @@ class ZoMBI:
         if plot_f == True:
             plot(fX_min = self.fX_min, compute = self.compute, nregular = self.nregular,
              bound_l = self.bound_l, bound_u = self.bound_u, dim = X_i.shape[1], ensemble = self.ensemble, activations = self.activations)
-
